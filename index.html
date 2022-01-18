@@ -17,17 +17,17 @@
     </head>
   <body>
    <!-- Шапка (верхняя линия)  -->
-    <header class="header">
+    <header class="header ">
       <div class="container header-container">
         <a class="header-logo link" href="/"> <span class="site">Web</span><span class="logo">Studio</span></a>
-        <nav class="header-nav">
+        <nav class="header-nav ">
           <ul class="list header-list">
-            <li class="header-item"><a class="link header-link" href=""> <div class="text">Студия</div></a></li>
-            <li class="header-item"><a class="link header-link" href="./portfolio.html">Портфолио</a></li>
-            <li class="header-item"><a class="link header-link" href="">Контакты</a></li>
+            <li class="header-item "><a class="link header-link  current" href=""> <div class="text ">Студия</div></a></li>
+            <li class="header-item "><a class="link header-link " href="./portfolio.html">Портфолио</a></li>
+            <li class="header-item "><a class="link header-link " href="">Контакты</a></li>
           </ul>
         </nav>
-        <div class="header-connect">
+        <div class="header-connect ">
          <ul class="header-connect-icon">
             <li class="icon-container">
               <a class="link header-mail " href="mailto:info@devstudio.com">
@@ -52,7 +52,7 @@
      <section class="hero overlay">
        <div class="container">
          <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-         <button class="hero-btn" type="button">Заказать услугу</button>
+         <button class="hero-btn" type="button" data-modal-open>Заказать услугу</button>
        </div>
      </section>    
       <!-- Особенности -->
@@ -105,13 +105,22 @@
          <h2 class="work-title">Чем мы занимаемся</h2>
          <ul class="list list-container">
            <li class="work-container">
-             <img src="./img/notebook-smartphone.jpg" alt="ноутбук и планшет" width="370">
+             <div class="work-item-wrap">
+                <img src="./img/notebook-smartphone.jpg" alt="ноутбук и планшет" width="370" height="294">
+                <p class="work-img-text">Десктопные приложения</p>
+             </div>
            </li>
            <li class="work-container">
-             <img src="./img/notebook.jpg" alt="ноутбук и телефон" width="370">
+              <div class="work-item-wrap">
+                <img src="./img/notebook.jpg" alt="ноутбук и телефон" width="370" height="294">
+                <p class="work-img-text">Мобильные приложения</p>
+              </div>
            </li>
            <li class="work-container">
-             <img src="./img/tablet.jpg" alt="планшет" width="370">
+              <div class="work-item-wrap">
+                <img src="./img/tablet.jpg" alt="планшет" width="370" height="294">
+                <p class="work-img-text">Дизайнерские решения</p>
+              </div>
            </li>
          </ul>
        </div>
@@ -368,5 +377,13 @@
         </div>
      </div>
    </footer>
+   <div class="backdrop is-hidden" data-modal>
+     <div class="modal">
+       <button type="button" class="modal-close" data-modal-close>
+         <img src="./img/Vector.svg" alt="" width="11" height="11">
+       </button>
+     </div>
+   </div>
+    <script src="./js/modal.js"></script>
  </body>
 </html>
